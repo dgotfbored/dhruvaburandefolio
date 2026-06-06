@@ -399,7 +399,29 @@ h2.section-title {
   top: 2px;
 }
 
-/* PROJECTS GRID & HIGHLIGHT TARGETS */
+/* HIGHLIGHT ALL BOXES CONTAINING NAVIGATION LINKS IN THE BODY */
+.proj-card, .proj-card-wide, .commission-block, .cert-link-block, .contact-links {
+  display: flex;
+  border: 1px solid var(--gold2);
+  background: rgba(201,169,110,0.03);
+}
+
+body.light-mode .proj-card, 
+body.light-mode .proj-card-wide, 
+body.light-mode .commission-block, 
+body.light-mode .cert-link-block, 
+body.light-mode .contact-links {
+  background: rgba(201,169,110,0.06);
+  border: 1px solid var(--gold2);
+}
+
+.proj-card:hover, .proj-card-wide:hover, .commission-block:hover, .cert-link-block:hover, .contact-links:hover {
+  background: rgba(201,169,110,0.08);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(201,169,110,0.15);
+}
+
+/* PROJECTS GRID */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -407,25 +429,13 @@ h2.section-title {
 }
 
 .proj-card {
-  display: flex;
   flex-direction: column;
-  border: 1px solid var(--border2);
-  background: var(--bg2);
-  transition: background 0.25s, border-color 0.25s;
 }
 
 .proj-card-wide {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 380px 1fr;
-  border: 1px solid var(--border2);
-  background: var(--bg2);
-  transition: background 0.25s, border-color 0.25s;
-}
-
-.proj-card:hover, .proj-card-wide:hover, .commission-block:hover, .cert-link-block:hover, .contact-links:hover {
-  background: var(--bg3);
-  border-color: var(--gold2);
 }
 
 .proj-card-img {
@@ -561,9 +571,8 @@ h2.section-title {
 }
 
 .commission-block {
-  background: var(--bg2);
-  border: 1px solid var(--border2);
   padding: 40px;
+  flex-direction: column;
 }
 
 .commission-block h3 {
@@ -622,10 +631,7 @@ h2.section-title {
 
 /* CERTIFICATES */
 .cert-link-block {
-  background: var(--bg2);
-  border: 1px solid var(--border2);
   padding: 48px 40px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 560px;
@@ -646,11 +652,8 @@ h2.section-title {
 }
 
 .contact-links {
-  display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 1px solid var(--border2);
-  background: var(--bg2);
   padding: 32px 30px;
 }
 
