@@ -695,13 +695,13 @@ footer {
 .fade-in:nth-child(6) { animation-delay: 0.5s; }
 .fade-in:nth-child(7) { animation-delay: 0.6s; }
 
-@media (max-width: 720px) {
+@media (max-width: 991px) {
   nav { padding: 0 20px; }
 
   .nav-links {
     display: none;
     position: fixed;
-    top: 64px; 
+    top: 64px;
     left: 0; right: 0;
     background: rgba(14,13,11,0.98);
     flex-direction: column;
@@ -724,21 +724,20 @@ footer {
 
   .nav-toggle { display: flex; }
 
-  /* FIX: Reduce vertical padding from 100px to 50px for mobile screens */
-  section { padding: 50px 20px; }
+  section { padding-left: 20px; padding-right: 20px; }
   
-  /* FIX: Adjust hero height for mobile addressing the mobile browser bar gap */
   #hero { 
-    padding: 100px 20px 40px 20px; 
-    min-height: 100dvh; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
   }
   
-  /* FIX: Force grid system to collapse down cleanly to single-column */
-  .projects-grid { 
-    grid-template-columns: 1fr !important; 
-    gap: 16px;
-  }
-  
+  .exp-item { grid-template-columns: 1fr; }
+  .exp-dates { text-align: left; }
+  .projects-grid { grid-template-columns: 1fr !important; }
   .proj-card-wide { grid-template-columns: 1fr; }
   .proj-card-wide-img { height: 220px; }
   .contact-layout { grid-template-columns: 1fr; }
@@ -784,7 +783,7 @@ footer {
     <span>·</span>
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dburande0124@gmail.com" target="_blank">dburande0124@gmail.com</a>
     <span>·</span>
-    <span>Dhankawadi, Pune, MH 411046</span>
+    <span>Katraj, Pune, MH 411046</span>
   </div>
   <div class="hero-cta fade-in">
     <a href="#selected-projects" class="btn btn-primary">Selected Projects</a>
@@ -802,9 +801,9 @@ footer {
   <p class="about-text">My creative writing has found its way into three published poetry anthologies. My academic writing has produced a research paper in English Criticism engaging with Baudrillard, phenomenology, and literary theory. I am available for content writing, editorial work, proofreading, and academic writing projects.</p>
   <div class="lang-row">
     <span class="lang-pill">English</span>
+    <span class="lang-pill">German</span>
     <span class="lang-pill">Hindi</span>
     <span class="lang-pill">Marathi</span>
-    <span class="lang-pill">German</span>
   </div>
 </section>
 
@@ -868,7 +867,7 @@ footer {
   <div class="section-label">Selected Projects</div>
   <h2 class="section-title">Core Engagements &amp; Copywriting<br><em style="font-family:var(--serif);font-style:italic;font-weight:300">Professional Collaborations.</em></h2>
   
- <div class="projects-grid">
+  <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
     
     <div class="proj-card">
       <div class="proj-card-body" style="padding-top: 24px;">
@@ -898,6 +897,10 @@ footer {
 <section id="projects">
   <div class="section-label">Selected Publications</div>
   <h2 class="section-title">Published Work &amp; Research</h2>
+
+  <p style="font-family: var(--serif); font-style: italic; color: var(--ink2); font-size: var(--fs-body); margin-top: -20px; margin-bottom: 45px; max-width: 760px; line-height: 1.6; letter-spacing: 0.02em;">
+    "...As for the leaf that falls, Even October awaits / An unfinished poem Begs for a fitting closure, / A lytic mind longs for respite, / An artery pines for a rupture, / A dead cigarette yearns for another kiss..."
+  </p>
 
   <div class="projects-grid">
 
@@ -1059,7 +1062,7 @@ footer {
       <p style="font-size:var(--fs-body);color:var(--ink3);line-height:1.75;margin-bottom:8px;max-width:380px;">Available for content writing, editorial projects, proofreading, tutoring, and academic writing. Reach out directly by phone or email.</p>
       <a href="tel:+919970640510" class="btn" style="justify-content:flex-start;">+91-9970640510</a>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dburande0124@gmail.com" target="_blank" class="btn" style="justify-content:flex-start;">dburande0124@gmail.com</a>
-      <span class="btn" style="cursor:default;color:var(--ink3);justify-content:flex-start;">Dhankawadi, Pune, Maharashtra 411046</span>
+      <span class="btn" style="cursor:default;color:var(--ink3);justify-content:flex-start;">Katraj, Pune, Maharashtra 411046</span>
     </div>
     <div>
       <img src="portrait.jpg" alt="Dhruva Burande" class="contact-portrait">
